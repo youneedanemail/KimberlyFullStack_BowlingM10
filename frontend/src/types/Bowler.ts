@@ -1,4 +1,5 @@
 export type Bowler = {
+  team: any;
   bowlerid: number;
   bowlerlastname: string;
   bowlerfirstname: string;

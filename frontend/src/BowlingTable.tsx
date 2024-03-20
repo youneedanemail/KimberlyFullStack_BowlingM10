@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Bowler } from './types/Bowler';
 
-function BTable() {
+function BowlingTable() {
   const [bowlerData, setBowlerData] = useState<Bowler[]>([]);
+
+
 
   useEffect(() => {
     const fetchBowlerData = async () => {
@@ -43,7 +45,7 @@ function BTable() {
           {bowlerData.map((b) => (
             <tr key={b.bowlerid}>
               <th>{b.bowlerfirstname}</th>
-              <th>{b.teamname}</th>
+              <th>{b.team.teamname}</th>
               <th>{b.bowleraddress}</th>
               <th>{b.bowlercity}</th>
               <th>{b.bowlerstate}</th>
@@ -57,4 +59,4 @@ function BTable() {
   );
 }
 
-export default BTable;
+export default BowlingTable;
